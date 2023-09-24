@@ -1,23 +1,29 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main(){
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Counter App',
-      home: CounterScreen(),
+      home: HomeScreen(),
     );
   }
 }
 
-class CounterScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
-  _CounterScreenState createState() => _CounterScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _CounterScreenState extends State<CounterScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   int count = 0;
 
   void _incrementCount() {
